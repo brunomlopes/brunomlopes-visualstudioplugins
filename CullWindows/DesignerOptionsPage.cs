@@ -14,8 +14,15 @@ namespace BrunoMLopes.CullWindows {
             base.ResetSettings();
             NumberOfOpenFiles = 10;
         }
-        
-        [Description("Maximum number of files opened on tabs. If more are open, the last used file (which isn't modified) is closed")]
-        public int NumberOfOpenFiles { get; set; }
+
+        private int _numberOfOpenFiles = 10;
+
+        [DisplayName("Number of open files")]
+        [DefaultValue(10)]
+        [Description("Maximum number of concurrent files opened on tabs. If more are open, the last used file (which isn't modified) is closed")]
+        public int NumberOfOpenFiles {
+            get { return _numberOfOpenFiles; }
+            set { _numberOfOpenFiles = value; }
+        }
     }
 }
