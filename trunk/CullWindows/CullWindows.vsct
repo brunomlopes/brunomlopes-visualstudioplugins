@@ -84,15 +84,6 @@
     <!-- This is the package guid. -->
     <GuidSymbol name="guidCullWindowsPkg" value="{86b3430a-9294-4115-a3cd-907f077d8eaf}" />
     
-    <!-- This is the guid used to group the menu commands together -->
-    <GuidSymbol name="guidCullWindowsCmdSet" value="{81b30c38-2906-4ede-9a19-979c9e4cda61}">
-
-      <IDSymbol name="MyMenuGroup" value="0x1020" />
-      <IDSymbol name="cmdidCullWindows" value="0x0100" />
-    </GuidSymbol>
-    
-    
-    
     <GuidSymbol name="guidImages" value="{84072099-d5cc-4659-b93e-72ee5a365479}" >
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
