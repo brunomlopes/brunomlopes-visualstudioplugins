@@ -3,7 +3,7 @@
 <?define VisualStudioRegistryRoot = "Software\Microsoft\VisualStudio\9.0" ?>
 
 <Wix xmlns='http://schemas.microsoft.com/wix/2003/01/wi'>
-  <Product Name='DeployCullWindows' Id='54748C47-DC70-43ec-A296-ECD7F30A548C'
+  <Product Name='Cull Windows Visual Studio Plugin' Id='54748C47-DC70-43ec-A296-ECD7F30A548C'
     Language='1033' Codepage='1252' Version='1.0.0' Manufacturer='Bruno Lopes'>
 
 	<Package Id='783504D0-C867-45cb-8E31-10484282E6F6' Keywords='Installer'
@@ -13,19 +13,19 @@
 
     <Media Id='1' Cabinet='CullWindows.cab' EmbedCab='yes' />
 
-    <!-- Properties -->
+	  <!-- Properties -->
     <Property Id="DEVENV_EXE_PATH">
       <RegistrySearch Id="RegSearch_DevenvExe_Path" Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Setup\VS" Name="EnvironmentPath" Type="raw" />
     </Property>
 
-    <!-- Launch conditions -->
+	  <!-- Launch conditions -->
     <Condition Message="An administrator must approve or install [ProductName]."> Privileged </Condition>
     <Condition Message="[ProductName] requires Visual Studio 2008."> DEVENV_EXE_PATH </Condition>
 
     <!-- Root directories -->
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="ProgramFilesFolder" Name="PFILES">
-        <Directory Id="INSTALLDIR" Name="MyFolder" >
+        <Directory Id="INSTALLDIR" Name="CullWind" LongName="Cull Windows" >
 
           <Component Guid="7D6D266D-4197-439b-ADB4-D51876269055" Id="MainExecutable">
 			<File Id="Cull.dll" Name="Cull.dll" Source="bin\Debug\CullWindows.dll" Vital="yes" DiskId="1" />            
