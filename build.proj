@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project DefaultTargets="All" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Solution>CullWindows.sln</Solution>
+  </PropertyGroup>
+
+  <Target Name="build-solution" Outputs="bin\Debug\CullWindows.dll">
+    <MSBuild Projects="$(Solution)" Targets="Build"/>
+  </Target>
+
+  <Target Name="build-setup" Outputs="bin\DeployCullWindows.msi">
+    <Exec Command="%22$(VSSDK90Install)%22\VisualStudioIntegration\Tools\Wix\candle -out bin\DeployCullWindows.wsxobj DeployCullWindows.wxs"
+          WorkingDirectory="CullWindows"/>
+    <Exec Command="%22$(VSSDK90Install)%22\VisualStudioIntegration\Tools\Wix\light -out bin\DeployCullWindows.msi bin\DeployCullWindows.wsxobj"
+          WorkingDirectory="CullWindows"/>
+  </Target>
+
+  <Target Name="All" DependsOnTargets="build-solution;build-setup">
+  </Target>
+
+</Project>

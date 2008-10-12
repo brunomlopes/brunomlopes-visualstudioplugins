@@ -1,0 +1,45 @@
+<Include>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\InstalledProducts\CullWindowsPackage" Value="#110" Type="string">
+    <Registry Name="Package" Value="{86b3430a-9294-4115-a3cd-907f077d8eaf}" Type="string" />
+    <Registry Name="ProductDetails" Value="#112" Type="string" />
+    <Registry Name="PID" Value="1.0" Type="string" />
+    <Registry Name="LogoID" Value="#400" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\Packages\{86b3430a-9294-4115-a3cd-907f077d8eaf}" Value="BrunoMLopes.CullWindows.CullWindowsPackage, CullWindows, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string">
+    <Registry Name="InprocServer32" Value="[SystemFolder]mscoree.dll" Type="string" />
+    <Registry Name="Class" Value="BrunoMLopes.CullWindows.CullWindowsPackage" Type="string" />
+    <Registry Name="CodeBase" Value="[#Cull.dll]" Type="string" />
+    <Registry Name="ID" Value="104" Type="integer" />
+    <Registry Name="MinEdition" Value="Standard" Type="string" />
+    <Registry Name="ProductVersion" Value="1.0" Type="string" />
+    <Registry Name="ProductName" Value="Cull Windows" Type="string" />
+    <Registry Name="CompanyName" Value="BrunoMLopes" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\AutoLoadPackages\{f1536ef8-92ec-443c-9ed7-fdadf150da82}">
+    <Registry Name="{86b3430a-9294-4115-a3cd-907f077d8eaf}" Value="0" Type="integer" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\Cull Windows" Value="#1000" Type="string">
+    <Registry Name="Package" Value="{86b3430a-9294-4115-a3cd-907f077d8eaf}" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\Cull Windows\Options" Value="#1001" Type="string">
+    <Registry Name="Package" Value="{86b3430a-9294-4115-a3cd-907f077d8eaf}" Type="string" />
+    <Registry Name="Page" Value="{be466bf8-97fc-11dd-b095-1d6456d89593}" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\AutomationProperties\Cull Windows\Options">
+    <Registry Name="Name" Value="Cull Windows.Options" Type="string" />
+    <Registry Name="Package" Value="{86b3430a-9294-4115-a3cd-907f077d8eaf}" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\9.0\UserSettings\Cull Windows_Options" Value="2001" Type="string">
+    <Registry Name="Package" Value="{86b3430a-9294-4115-a3cd-907f077d8eaf}" Type="string" />
+    <Registry Name="Category" Value="{be466bf8-97fc-11dd-b095-1d6456d89593}" Type="string" />
+    <Registry Name="ToolsOptionsPath" Value="Cull Windows" Type="string" />
+    <Registry Name="VSSettingsMigration" Value="0" Type="integer" />
+  </Registry>
+</Include>
